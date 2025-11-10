@@ -6,13 +6,13 @@
 /*   By: pmota-ga <pmota-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:31:47 by pmota-ga          #+#    #+#             */
-/*   Updated: 2025/11/10 15:09:25 by pmota-ga         ###   ########.fr       */
+/*   Updated: 2025/11/10 16:38:48 by pmota-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 

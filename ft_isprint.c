@@ -6,11 +6,11 @@
 /*   By: pmota-ga <pmota-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:00:11 by pmota-ga          #+#    #+#             */
-/*   Updated: 2025/11/10 14:55:46 by pmota-ga         ###   ########.fr       */
+/*   Updated: 2025/11/10 16:38:12 by pmota-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);

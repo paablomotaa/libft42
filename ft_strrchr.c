@@ -6,11 +6,11 @@
 /*   By: pmota-ga <pmota-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:04:01 by pmota-ga          #+#    #+#             */
-/*   Updated: 2025/11/10 15:11:21 by pmota-ga         ###   ########.fr       */
+/*   Updated: 2025/11/10 16:39:03 by pmota-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int			i;
 	const char	*last;

@@ -6,13 +6,15 @@
 /*   By: pmota-ga <pmota-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:20:21 by pmota-ga          #+#    #+#             */
-/*   Updated: 2025/11/10 15:05:40 by pmota-ga         ###   ########.fr       */
+/*   Updated: 2025/11/10 16:38:56 by pmota-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+#include <string.h>
+
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')

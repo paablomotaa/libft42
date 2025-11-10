@@ -1,17 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmota-ga <pmota-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/10 12:26:09 by pmota-ga          #+#    #+#             */
-/*   Updated: 2025/11/10 16:39:34 by pmota-ga         ###   ########.fr       */
+/*   Created: 2025/11/10 16:07:15 by pmota-ga          #+#    #+#             */
+/*   Updated: 2025/11/10 16:38:33 by pmota-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include <string.h>
+
+void *ft_memchr(const void *s, int c, size_t n)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
+    const unsigned char* p = (unsigned char *) s;
+    unsigned char ch = (unsigned char)c;
+    
+    size_t i = 0;
+    while(i < n)
+    {
+        if(p[i] == c)
+        {
+            return (void *)(p);
+        }
+        i++;
+        p++;
+    }
+    return NULL;
 }

@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmota-ga <pmota-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/10 15:24:06 by pmota-ga          #+#    #+#             */
-/*   Updated: 2025/11/10 16:38:40 by pmota-ga         ###   ########.fr       */
+/*   Created: 2025/11/10 16:27:43 by pmota-ga          #+#    #+#             */
+/*   Updated: 2025/11/10 16:38:17 by pmota-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+char *ft_strnstr(const char *big, const char *tittle, size_t len)
 {
-    unsigned char *d = (unsigned char *)dest;
-    unsigned char *s = (unsigned char *)src;
     size_t i;
+    size_t j;
 
+    if(!tittle[0])
+        return ((char *) big);
     i = 0;
-    while(i < n)
+    while(i < len && big[i] != '\0')
     {
-        d[i] = s[i];
+        j = 0;
+        while(i + j < len && big[i+j] != '\0' && tittle[j] != '\0' && big[i+j] == tittle[j])
+        {
+            j++;
+        }
+        if(tittle[j] == '\0')
+            return ((char *)&big[i]);
         i++;
     }
-    return (dest);
+    return (NULL);
 }
